@@ -2,26 +2,41 @@
   "name": "chitchat",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-dev": "npx webpack --mode development --config webpack.config.js --watch",
+    "build-prod": "npx webpack --mode production --config webpack.config.js --watch",
+    "start": "node server/app.js",
+    "start-dev": "nodemon server/app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kaigong1988/chitchat.git"
   },
   "author": "Kai",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kaigong1988/chitchat/issues"
   },
   "homepage": "https://github.com/kaigong1988/chitchat#readme",
   "dependencies": {
+    "axios": "^0.21.1",
+    "babel": "^6.23.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "react": "^17.0.1",
-    "socket.io": "^3.1.0"
+    "react-dom": "^17.0.1",
+    "socket.io": "^3.1.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "html-webpack-plugin": "^4.5.1",
+    "nodemon": "^2.0.7",
+    "webpack": "^5.20.0"
   }
 }
