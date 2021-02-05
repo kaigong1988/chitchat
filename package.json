@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build-dev": "npx webpack --mode development --config webpack.config.js --watch",
     "build-prod": "npx webpack --mode production --config webpack.config.js --watch",
     "start": "node server/app.js",
@@ -31,12 +31,15 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
+    "@babel/core": "^7.12.13",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
     "babel-loader": "^8.2.2",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "html-webpack-plugin": "^4.5.1",
+    "jest": "^26.6.3",
     "nodemon": "^2.0.7",
-    "webpack": "^5.20.0"
+    "webpack": "^5.20.0",
+    "webpack-cli": "^4.5.0"
   }
 }
