@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Login from './Login.jsx';
 
 function App() {
-  return <div>Hello World!</div>;
+  const [id, setId] = useState();
+  return (
+    <div>
+      {id}
+      <Login onIdSubmit={setId} />
+    </div>
+  );
 }
 
 export default App;
